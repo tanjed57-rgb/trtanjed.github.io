@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>টি আর তানজিদ | ব্যক্তিগত ট্রাভেল ডায়েরি</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#10b981', 
+                        'dark-green': '#059669',
+                        'light-gray': '#f3f4f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-dark-green">
+                <span class="text-primary-green">TR</span> Tanjed 🌍 <!-- English: TR Tanjed -->
+            </h1>
+            <nav class="hidden sm:block">
+                <a href="#about" class="text-gray-600 hover:text-dark-green mx-3 transition duration-150 font-medium">আমার সম্পর্কে</a>
+                <a href="#blog" class="text-gray-600 hover:text-dark-green mx-3 transition duration-150 font-medium">ভ্রমণ পোস্ট</a>
+                <a href="#contact" class="text-gray-600 hover:text-dark-green mx-3 transition duration-150 font-medium">যোগাযোগ</a>
+            </nav>
+            <button id="menu-button" class="sm:hidden text-gray-600 hover:text-dark-green focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <nav id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100 py-2">
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-light-gray transition duration-150">আমার সম্পর্কে</a>
+            <a href="#blog" class="block px-4 py-2 text-gray-700 hover:bg-light-gray transition duration-150">ভ্রমণ পোস্ট</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-light-gray transition duration-150">যোগাযোগ</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="bg-primary-green text-white py-16 px-4 text-center shadow-lg">
+            <div class="max-w-4xl mx-auto">
+                <div class="rounded-full w-24 h-24 mx-auto mb-4 bg-white border-4 border-white shadow-xl flex items-center justify-center">
+                    <span class="text-5xl" role="img" aria-label="Passport Icon">🗺️</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-2">ভ্রমণ: আমার শখ, আমার অনুপ্রেরণা!</h2>
+                <p class="text-xl font-light mb-6">টি আর তানজিদ বলছি। প্রতিটি নতুন জায়গা, বিশেষ করে প্রকৃতির সবুজ রং, আমাকে সামনে এগিয়ে যাওয়ার প্রেরণা দেয়।</p>
+                <a href="#blog" class="inline-block bg-dark-green hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-xl">
+                    আমার সব পোস্ট দেখুন
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-12 px-4">
+            <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
+                <h3 class="text-2xl font-bold text-dark-green border-b-2 border-primary-green pb-2 mb-6">আমার সম্পর্কে</h3>
+                
+                <div class="space-y-4 text-gray-700">
+                    <p>আমি টি আর তানজিদ, বর্তমানে একজন শিক্ষার্থী হিসেবে পড়াশোনা করছি। আমার মূল লক্ষ্য হলো IELTS সম্পন্ন করে বিদেশে উন্নত জীবনের জন্য পাড়ি জমানো। এই লক্ষ্য পূরণের পথে, আমার অবসর বিনোদনের প্রধান উপায় হলো ঘুরে বেড়ানো এবং প্রকৃতির সাথে সময় কাটানো। আমি **একা থাকতে** এবং নিরিবিলি পরিবেশে চিন্তাভাবনা করতে বেশি স্বচ্ছন্দ বোধ করি, যা আমাকে অনেক সৃজনশীলতা দেয়।</p>
+                    
+                    <!-- Personalized Detail -->
+                    <p class="border-l-4 border-primary-green pl-4 py-2 bg-light-gray rounded-md">
+                        <strong>আমার জন্মস্থান:</strong> আমি ঝিনাইদহ জেলার হরিণাকুন্ডু উপজেলার কাপাশহাটিয়া ইউনিয়নের হিজলী স্কুল পাড়া-এর বাসিন্দা। আমার প্রিয় রং **সবুজ (Green)**, যা আমার ভেতরের স্থিরতাকে ফুটিয়ে তোলে।
+                    </p>
+                    
+                    <p>এই ওয়েবসাইটটি তৈরি করা হয়েছে মূলত ডিজিটাল মার্কেটিং এবং কন্টেন্ট মার্কেটিং অনুশীলনের জন্য। এখানে আমি আমার ভ্রমণ অভিজ্ঞতা, IELTS প্রস্তুতি এবং জীবনের বিভিন্ন চিন্তা নিয়ে পোস্ট করব।</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Travel Blog Section (Integrated with Firestore for future use) -->
+        <section id="blog" class="bg-light-gray py-12 px-4">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-dark-green border-b-2 border-primary-green pb-2 mb-8">আমার ভ্রমণ পোস্ট</h3>
+                
+                <!-- Blog posts will be loaded here dynamically using JavaScript and Firestore -->
+                <div id="posts-container" class="space-y-6">
+                    <!-- Loading State / Placeholder -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center text-gray-500">
+                        <svg class="animate-spin h-6 w-6 mr-3 inline-block text-primary-green" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                        পোস্ট লোড হচ্ছে... (অথবা, এখনো কোনো পোস্ট লেখা হয়নি)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 px-4 text-center">
+            <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">যোগাযোগ</h3>
+                <p class="text-gray-600 mb-6">আমার ভ্রমণ, পড়াশোনা বা ডিজিটাল মার্কেটিং প্রজেক্ট সম্পর্কে কোনো প্রশ্ন থাকলে নির্দ্বিধায় যোগাযোগ করুন।</p>
+                
+                <!-- Personal Contact Links -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    
+                    <!-- WhatsApp/Phone (Updated with your number) -->
+                    <div class="flex items-center justify-center p-3 rounded-xl bg-primary-green text-white shadow-lg">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.039 2C6.516 2 2 6.533 2 12.052c0 5.148 3.535 9.479 8.204 10.375L12 24l1.796-1.573c4.669-.896 8.204-5.227 8.204-10.375C22 6.533 17.484 2 12.039 2zm4.072 14.155c-.216.514-.658.514-1.298.243-.64-.27-.856-.486-1.298-1.001-.442-.514-.972-.729-1.353-.27-.38.459-.946 1.109-1.297 1.378-.352.27-.648.405-1.134.135-.486-.27-.649-.675-.38-1.297.27-.621.54-1.243.81-1.864.27-.621.27-.946.135-1.243-.135-.297-.405-.675-.54-1.08-.135-.405-.27-.676-.54-1.08-.27-.405-.54-.54-.81-.54-.27 0-.54 0-.81.27-.27.27-.675.675-1.08 1.08-.405.405-.81 1.08-1.215 1.756-.405.675-.675 1.243-.405 1.648.27.405.81 1.352 2.162 2.162 1.352.81 2.566 1.162 3.447 1.324.88.162 1.352.135 1.757-.135.405-.27.675-.675.945-1.08.27-.405.27-.675.27-1.08 0-.405-.027-.648-.135-.88z"/></svg>
+                        <a href="https://wa.me/8801796687842" target="_blank" class="font-semibold">01796687842 (WhatsApp/Telegram)</a>
+                    </div>
+                    
+                    <!-- Email (You must replace this with your real email!) -->
+                    <div class="flex items-center justify-center p-3 rounded-xl bg-dark-green text-white shadow-lg">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span class="font-semibold">your-email@example.com <span class="text-yellow-300">(পরিবর্তন করুন)</span></span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+            <p>&copy; <span id="year"></span> টি আর তানজিদ | হিজলী স্কুল পাড়া, হরিণাকুন্ডু, ঝিনাইদহ</p>
+            <p class="mt-1 text-gray-400">ব্যক্তিগত পোর্টফোলিও এবং ডিজিটাল মার্কেটিং প্রজেক্ট</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs for future development -->
+    <script type="module">
+        // Global variables for Firebase configuration (provided by environment)
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        let firebaseConfig = null;
+        try {
+            firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        } catch (e) {
+            console.error("Firebase config parsing error:", e);
+        }
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithCustomToken, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, onSnapshot, query, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // ----------------------------------------------------
+        // --- Firebase Initialization and Data Fetching ---
+        // ----------------------------------------------------
+
+        let db = null;
+        let auth = null;
+        let userId = 'loading'; // Placeholder user ID
+
+        // Function to render the blog posts from Firestore data
+        const renderPosts = (posts) => {
+            const container = document.getElementById('posts-container');
+            if (!container) return;
+
+            if (posts.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center text-gray-500">
+                        <p>এখনও কোনো পোস্ট লেখা হয়নি। আপনার ডিজিটাল মার্কেটিং প্রজেক্টের অংশ হিসেবে প্রথম পোস্টটি লিখুন!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Sort posts by creation date (latest first)
+            // IMPORTANT: Firestore Timestamps are objects, sort by seconds
+            posts.sort((a, b) => b.timestamp.seconds - a.timestamp.seconds);
+
+            container.innerHTML = posts.map(post => {
+                const dateString = post.timestamp && post.timestamp.seconds 
+                                   ? new Date(post.timestamp.seconds * 1000).toLocaleDateString('bn-BD')
+                                   : 'তারিখ নেই';
+
+                return `
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                        <!-- Dynamic Placeholder Image based on post title -->
+                        <img src="https://placehold.co/800x400/10b981/ffffff?text=${encodeURIComponent(post.title)}" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/800x400/10b981/ffffff?text=Travel+Post';" 
+                             alt="${post.title}" 
+                             class="w-full h-48 object-cover">
+                        
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-primary-green uppercase tracking-wider">${post.category || 'ভ্রমণ ডায়েরি'}</span>
+                            <h4 class="text-xl font-bold mt-1 mb-3 text-gray-800">${post.title}</h4>
+                            <p class="text-gray-600 mb-4 line-clamp-3">${post.excerpt}</p>
+                            <p class="text-xs text-gray-400 mb-4">
+                                প্রকাশিত: ${dateString}
+                            </p>
+                            <a href="#" class="text-dark-green font-semibold hover:underline flex items-center" 
+                               onclick="alert('এটি একটি ডেমো লিঙ্ক। পোস্টের সম্পূর্ণ টেক্সট দেখতে নতুন পেজ তৈরি করতে হবে।')">
+                                পুরো লেখাটি পড়ুন 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        };
+
+        const setupFirebase = async () => {
+            try {
+                if (Object.keys(firebaseConfig).length === 0) {
+                    console.warn("Firebase config is missing. Skipping Firestore setup.");
+                    renderPosts([{
+                        title: "শুরু করার জন্য ডেমো পোস্ট",
+                        excerpt: "ডিজিটাল মার্কেটিং প্রজেক্টের অংশ হিসেবে ফায়ারস্টোর কানেকশন তৈরি হয়েছে। আপনি আপনার প্রথম ট্রাভেল পোস্ট এখানে যোগ করলেই তা দেখতে পাবেন!",
+                        category: "প্রজেক্ট নোট",
+                        timestamp: { seconds: Date.now() / 1000 } 
+                    }]);
+                    return;
+                }
+                
+                // setLogLevel('debug'); // Uncomment for debugging
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // Authenticate the user
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+
+                // Set User ID
+                userId = auth.currentUser?.uid || crypto.randomUUID();
+                console.log("Firebase initialized. User ID:", userId);
+
+                // Define the collection path for personal data
+                const userPostsCollectionPath = `/artifacts/${appId}/users/${userId}/travel_posts`;
+                
+                // Get a reference to the collection
+                const postsRef = collection(db, userPostsCollectionPath);
+                
+                // Set up real-time listener using onSnapshot
+                const q = query(postsRef);
+                
+                onSnapshot(q, (snapshot) => {
+                    const posts = [];
+                    snapshot.forEach((doc) => {
+                        posts.push({ id: doc.id, ...doc.data() });
+                    });
+                    console.log("Fetched posts:", posts);
+                    renderPosts(posts);
+                }, (error) => {
+                    console.error("Error fetching posts:", error);
+                    renderPosts([{
+                        title: "ডেটা লোড করতে ব্যর্থ",
+                        excerpt: "পোস্ট লোড করার সময় একটি সমস্যা হয়েছে। কনসোলে লগ চেক করুন।",
+                        category: "এরর",
+                        timestamp: { seconds: Date.now() / 1000 } 
+                    }]);
+                });
+
+            } catch (error) {
+                console.error("Firebase setup failed:", error);
+            }
+        };
+
+        // Delay setup slightly to ensure all DOM elements are loaded
+        window.addEventListener('load', setupFirebase);
+
+    </script>
+    
+    <!-- General Script for UI -->
+    <script>
+        // Dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Smooth scroll for all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                // Check if the target is the blog section, prevent default scroll if it is a demo link
+                if (targetId === '#') return; 
+
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu after click
+                if (!mobileMenu.classList.contains('hidden')) {
+                     mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
